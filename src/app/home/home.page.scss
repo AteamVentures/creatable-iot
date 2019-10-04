@@ -1,0 +1,31 @@
+.dark-background {
+  background-color: #000 !important;
+}
+.light-header {
+  color: #fff;
+  font-size: 18px;
+}
+
+ion-item {
+  --ion-background-color: #000;
+}
+
+ion-toggle {
+  // zoom: 1.2;
+  --background: #fff;
+  --background-checked: #01acec;
+}
+
+.canvas-container {
+  // background-color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+canvas {
+  width: 100vw !important;
+  height: 50vw !important;
+  // background-color: aqua;
+}

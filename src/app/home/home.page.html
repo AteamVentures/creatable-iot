@@ -1,0 +1,144 @@
+<!-- <ion-header class="dark-background" no-border>
+  <ion-toolbar class="dark-background">
+    <ion-title class="light-header">
+      Creatable IoT
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content style="padding: 0;">
+  <div
+    class="dark-background"
+    style="width: 100vw; height: 100vh; overflow-y: scroll;"
+  >
+    <ion-card class="dark-background">
+      <ion-card-header class="light-header">
+        Temperature: {{ temperature }}C
+      </ion-card-header>
+      <ion-card-content class="canvas-container">
+        <canvas #doughnutCanvas></canvas>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="dark-background">
+      <ion-card-header class="light-header">
+        Humidity: {{ humidity }}%
+      </ion-card-header>
+      <ion-card-content class="canvas-container">
+        <canvas #doughnutCanvas2></canvas>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- <ion-card>
+      <ion-card-header>
+        Weight: {{ weight }} kg
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #lineCanvas></canvas>
+      </ion-card-content>
+    </ion-card> -->
+
+    <ion-list class="dark-background">
+      <!-- <ion-item>
+        <ion-label class="light-header">Relay Power</ion-label>
+        <ion-toggle
+          slot="end"
+          [(ngModel)]="relayON"
+          (ngModelChange)="updateRelay(relayON)"
+          [checked]="relayStatus === 'on'"
+        ></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="light-header">LED Power</ion-label>
+        <ion-toggle
+          slot="end"
+          [(ngModel)]="ledON"
+          (ngModelChange)="updateLED(ledON)"
+          [checked]="ledStatus === 'on'"
+        >
+        </ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="light-header">Wireless Power</ion-label>
+        <ion-toggle
+          slot="end"
+          [(ngModel)]="wirelessPowerON"
+          (ngModelChange)="updateWirelessPower(wirelessPowerON)"
+          [checked]="wirelessPowerStatus === 'on'"
+        >
+        </ion-toggle>
+      </ion-item> -->
+
+      <ion-item>
+        <ion-label class="light-header">Relay Power</ion-label>
+        <app-toggle
+          [toggleOn]="relayON"
+          (command)="updateRelay($event)"
+        ></app-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-label class="light-header">LED Power</ion-label>
+        <app-toggle
+          [toggleOn]="ledON"
+          (command)="updateLED($event)"
+        ></app-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-label class="light-header">Wireless Power</ion-label>
+        <app-toggle
+          [toggleOn]="wirelessPowerON"
+          (command)="updateWirelessPower($event)"
+        ></app-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="light-header">Video</ion-label>
+        <ion-select
+          class="light-header"
+          [(ngModel)]="videoOption"
+          (ngModelChange)="updateVideo(videoOption)"
+        >
+          <ion-select-option value="0">0</ion-select-option>
+          <ion-select-option value="1">1</ion-select-option>
+          <ion-select-option value="2">2</ion-select-option>
+          <ion-select-option value="3">3</ion-select-option>
+          <ion-select-option value="4">4</ion-select-option>
+          <ion-select-option value="5">5</ion-select-option>
+          <ion-select-option value="6">6</ion-select-option>
+          <ion-select-option value="7">7</ion-select-option>
+          <ion-select-option value="8">8</ion-select-option>
+          <ion-select-option value="9">9</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="light-header">Audio</ion-label>
+        <ion-select
+          class="light-header"
+          [(ngModel)]="audioOption"
+          (ngModelChange)="updateAudio(audioOption)"
+        >
+          <ion-select-option value="0">0</ion-select-option>
+          <ion-select-option value="1">1</ion-select-option>
+          <ion-select-option value="2">2</ion-select-option>
+          <ion-select-option value="3">3</ion-select-option>
+          <ion-select-option value="4">4</ion-select-option>
+          <ion-select-option value="5">5</ion-select-option>
+          <ion-select-option value="6">6</ion-select-option>
+          <ion-select-option value="7">7</ion-select-option>
+          <ion-select-option value="8">8</ion-select-option>
+          <ion-select-option value="9">9</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <!-- <div style="width: 100%; height: 8px;"></div> -->
+
+    <!-- <ion-fab vertical="bottom" horizontal="start" slot="fixed" style="width: 100vw; margin-left: -12px;">
+      <ion-button (click)="goToLiveVideo()" expand="full" style="width: 101%; height: 100px; margin-bottom: -25px;">Live
+        Video</ion-button>
+    </ion-fab> -->
+  </div>
+</ion-content>

@@ -1,0 +1,32 @@
+<div class="toggle-container-outer">
+  <div class="toggle-container" (click)="toggle()">
+    <div
+      #expandOff
+      *ngIf="!toggleOn"
+      class="toggle-button-text-container"
+      style="background-color: #FFFFFF;"
+    ></div>
+    <div
+      #textOn
+      *ngIf="toggleOn"
+      class="toggle-button-text-container"
+      style="background-color: #68AC3B;"
+    >
+      ON
+    </div>
+    <div
+      #textOff
+      *ngIf="!toggleOn"
+      class="toggle-button-text-container"
+      style="background-color: #D9534F;"
+    >
+      OFF
+    </div>
+    <div
+      #expandOn
+      *ngIf="toggleOn"
+      class="toggle-button-text-container"
+      style="background-color: #FFFFFF;"
+    ></div>
+  </div>
+</div>

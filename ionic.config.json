@@ -1,0 +1,7 @@
+{
+  "name": "ateamApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

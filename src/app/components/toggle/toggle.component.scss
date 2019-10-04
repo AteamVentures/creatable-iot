@@ -1,0 +1,25 @@
+.toggle-container-outer {
+  width: 120px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .toggle-container {
+    width: 150px;
+    height: 35px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    .toggle-button-text-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+    .toggle-button-text-container-off {
+      width: 0px !important;
+      overflow: hidden;
+    }
+  }
+}
