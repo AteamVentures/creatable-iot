@@ -4,8 +4,8 @@
 
 ### Technologies used for this project
 
-* [Ionic - Hybrid Mobile App Framework]("https://ionicframework.com/docs/intro")
-* [Chart.js - JavaScript Chart Library]("https://www.chartjs.org/")
+* [Ionic - Hybrid Mobile App Framework](https://ionicframework.com/docs/intro)
+* [Chart.js - JavaScript Chart Library](https://www.chartjs.org/)
 
 ### Dependency Installation
 
