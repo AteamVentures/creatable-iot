@@ -19,6 +19,9 @@ $ npm i # install all node modules for this project
 ### Running the app in development mode
 
 ```bash
+# Make sure you receive config.json from your admin
+# Move config.json into this location: src/app/home/config.json
+# You need the config.json file in the right location for this app to work
 $ ionic serve
 ```
 
