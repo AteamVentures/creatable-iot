@@ -14,13 +14,14 @@ const optionsStandard = {
     enabled: false
   },
   cutoutPercentage: 70,
-  rotation: -130,
+  rotation: 2.65 * Math.PI,
+  circumference: 1.7 * Math.PI,
   // responsive: true,
   maintainAspectRatio: true,
 };
 const colorsStandard = [
-  '#FFFFFF',
   '#01ACEC',
+  '#FFFFFF',
 ];
 const dataInterval = 2500;
 
@@ -205,14 +206,14 @@ export class HomePage {
         case 'temperature':
           this.temperature = lastValue;
           this.temperatureChart.data.datasets.forEach((dataset) => {
-            dataset.data = [100 - lastValue, lastValue];
+            dataset.data = [lastValue, 100 - lastValue];
           });
           this.temperatureChart.update();
           break;
         case 'humidity':
           this.humidity = lastValue;
           this.humidityChart.data.datasets.forEach((dataset) => {
-            dataset.data = [100 - lastValue, lastValue];
+            dataset.data = [lastValue, 100 - lastValue];
           });
           this.humidityChart.update();
           break;

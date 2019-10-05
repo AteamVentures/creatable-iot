@@ -17,15 +17,45 @@ ion-toggle {
 }
 
 .canvas-container {
-  // background-color: yellow;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  flex-direction: column;
+}
+
+.label-num {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  height: 25px;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 4px;
+  background-color: transparent;
+  z-index: 9999;
+  .invisible {
+    color: transparent;
+  }
+  .label-num-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10vw;
+  }
+  .label-num-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10vw;
+  }
 }
 
 canvas {
-  width: 100vw !important;
-  height: 50vw !important;
-  // background-color: aqua;
+  width: 90vw !important;
+  height: 45vw !important;
+  background-color: transparent;
 }
